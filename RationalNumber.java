@@ -53,6 +53,10 @@ public class RationalNumber extends RealNumber
   *@return true when the RationalNumbers have the same numerators and denominators, false otherwise.
   */
   public boolean equals(RationalNumber other){
+    boolean x = false;
+    if ( numerator == other.getNumerator() && denominator == other.getNumerator()){
+      x = true;
+    }
     return false;
   }
 
