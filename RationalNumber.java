@@ -15,7 +15,7 @@ public class RationalNumber extends RealNumber
       nume = 0;
     }
 
-      if (denom < 0)
+      if (deno < 0)
       {
          nume = nume * -1;
          deno = deno * -1;
@@ -26,7 +26,7 @@ public class RationalNumber extends RealNumber
   }
 
   public double getValue(){
-    return 0.0;
+    return numerator/denominator;
   }
 
   /**
