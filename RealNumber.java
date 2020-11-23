@@ -20,11 +20,11 @@ public class RealNumber{
   */
   public boolean equals(RealNumber other){
     boolean x = false;
-    if ( value == 0 || other.getValue() == 0){
-      x = (value == other.getValue());
+    if ( this.getValue() == 0 || other.getValue() == 0){
+      x = (this.getValue() == other.getValue());
     }
     else{
-      x = (Math.abs((value-other.getValue())/other.getValue()) <= 0.001);
+      x = (Math.abs((this.getValue()-other.getValue())/other.getValue()) <= 0.001);
     }
     return x;
   }
@@ -36,7 +36,8 @@ public class RealNumber{
   public RealNumber add(RealNumber other){
      //other can be ANY RealNumber, including a RationalNumber
      //or other subclasses of RealNumber (that aren't written yet)
-     return null;
+     RealNumber sum = new RealNumber(this.getValue() + other.getValue());
+     return sum;
   }
 
   /*
