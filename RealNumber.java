@@ -63,7 +63,7 @@ public class RealNumber{
   *this minus the other
   */
   public RealNumber subtract(RealNumber other){
-    RealNumber product = new RealNumber(this.getValue() - other.getValue());
-    return product;
+    RealNumber diff = new RealNumber(this.getValue() - other.getValue());
+    return diff;
   }
 }
