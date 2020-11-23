@@ -28,7 +28,10 @@ public class RationalNumber extends RealNumber
   }
 
   public double getValue(){
-    return numerator/denominator;
+    double x = getNumerator();
+    double y = getDenominator();
+    double z = x/y;
+    return z;
   }
 
   /**
@@ -94,10 +97,10 @@ public class RationalNumber extends RealNumber
   private void reduce(){
     if (numerator != 0)
       {
-         int common = gcd (Math.abs(numerator), Math.abs(denominator));
+         int cd = gcd (Math.abs(numerator), Math.abs(denominator));
 
-         numerator = numerator / common;
-         denominator = denominator / common;
+         numerator = numerator / cd;
+         denominator = denominator / cd ;
       }
   }
   /******************Operations Return a new RationalNumber!!!!****************/
