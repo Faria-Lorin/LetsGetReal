@@ -20,9 +20,11 @@ public class RationalNumber extends RealNumber
          nume = nume * -1;
          deno = deno * -1;
       }
-
       numerator = nume;
       denominator = deno;
+      reduce();
+
+
   }
 
   public double getValue(){
@@ -53,11 +55,7 @@ public class RationalNumber extends RealNumber
   *@return true when the RationalNumbers have the same numerators and denominators, false otherwise.
   */
   public boolean equals(RationalNumber other){
-    boolean x = false;
-    if ( this.numerator == other.getNumerator() && this.denominator == other.getNumerator()){
-      x = true;
-    }
-    return false;
+    return (numerator * other.getDenominator() == denominator * other.getNumerator());
   }
 
 
@@ -94,9 +92,13 @@ public class RationalNumber extends RealNumber
   *reduced after construction.
   */
   private void reduce(){
-    numerator = numerator / (gcd(numerator, denominator));
-    denominator = denominator / (gcd(numerator, denominator));
+    if (numerator != 0)
+      {
+         int common = gcd (Math.abs(numerator), Math.abs(denominator));
 
+         numerator = numerator / common;
+         denominator = denominator / common;
+      }
   }
   /******************Operations Return a new RationalNumber!!!!****************/
   /**
@@ -111,7 +113,7 @@ public class RationalNumber extends RealNumber
   *Return a new RationalNumber that is the this divided by the other
   */
   public RationalNumber divide(RationalNumber other){
-    RationalNumber quot = new RationalNumber((this.numerator / other.getNumerator()), (this.denominator / other.getDenominator()));
+    RationalNumber quot = new RationalNumber((this.numerator * other.getDenominator()), (this.denominator * other.getNumerator()));
     return quot;
   }
 
