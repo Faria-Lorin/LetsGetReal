@@ -24,7 +24,7 @@ public class RealNumber{
       x = (this.getValue() == other.getValue());
     }
     else{
-      x = (Math.abs((this.getValue()-other.getValue())/other.getValue()) <= 0.001);
+      x = ((Math.abs((this.getValue()-other.getValue())/other.getValue()) * 100) <= 0.001);
     }
     return x;
   }
