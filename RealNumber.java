@@ -18,7 +18,7 @@ public class RealNumber extends Number{
   *Return true when the values are within 0.001% of eachother.
   *Special case: if one is exactly zero, the other must be exactly zero.
   */
-  public boolean equals(RealNumber other){
+  /*public boolean equals(RealNumber other){
     boolean x = false;
     if ( this.getValue() == 0 || other.getValue() == 0){
       x = (this.getValue() == other.getValue());
@@ -27,7 +27,7 @@ public class RealNumber extends Number{
       x = ((Math.abs((this.getValue()-other.getValue())/other.getValue()) * 100) <= 0.001);
     }
     return x;
-  }
+  }*/
 
   /*
   *Return a new RealNumber that has the value of:
