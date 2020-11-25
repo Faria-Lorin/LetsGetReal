@@ -22,5 +22,12 @@ public abstract class Number{
   *Special case: if one is exactly zero, the other must be exactly zero.
   */
   public boolean equals(Number other){
-    //TO BE IMPLEMENTED  }
+    boolean x = false;
+    if ( this.getValue() == 0 || other.getValue() == 0){
+      x = (this.getValue() == other.getValue());
+    }
+    else{
+      x = ((Math.abs((this.getValue()-other.getValue())/other.getValue()) * 10000) <= 0.00001);
+    }
+    return x;
 }
