@@ -66,7 +66,7 @@ public class RationalNumber extends Number
   *@return the value expressed as "3/4" or "8/3"
   */
   public String toString(){
-    if ( denominator == 1){
+    if ( denominator == 1 || numerator == 0){
       return "" + numerator;
     }
     else return numerator + "/" + denominator;
