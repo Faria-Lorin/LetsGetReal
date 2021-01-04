@@ -9,7 +9,7 @@ public class RationalNumber extends Number
   *@param deno the denominator
   */
   public RationalNumber(int nume, int deno){
-    super();
+    
     if (deno == 0 || nume == 0){
       deno = 1;
       nume = 0;
